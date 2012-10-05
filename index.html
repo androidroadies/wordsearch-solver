@@ -35,7 +35,7 @@
 <p>Sample usage:</p>
 
 <pre><code>String[][] puzzle = ...
-BasicGrid grid = new BasicGrid(); // You can create your own implementation of grid if your puzzle is not from a String[][]
+BasicGrid grid = new BasicGrid(puzzle); // You can create your own implementation of Grid if your puzzle is not from a String[][]
 WordsearchSolver solver = new WordsearchSolver(grid);
 solver.findWord("cheese");
 </code></pre>
