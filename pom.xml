@@ -8,7 +8,7 @@
   <packaging>jar</packaging>
 
   <name>wordsearch-solver</name>
-  <url>http://maven.apache.org</url>
+  <url>http://rishihahs.github.com/wordsearch-solver</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,4 +22,53 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
+  <description>Java wordsearch solving library</description>
+  
+  <scm>
+  	<connection>scm:git:git://github.com/rishihahs/wordsearch-solver.git</connection>
+  	<url>https://github.com/rishihahs/wordsearch-solver</url>
+  	<developerConnection>scm:git:git@github.com:rishihahs/wordsearch-solver.git</developerConnection>
+  	<tag>1.0</tag>
+  </scm>
+  
+  <developers>
+     <developer>
+        <id>rishihahs</id>
+        <name>Rishi Shah</name>
+        <email>rishihahs@gmail.com</email>
+     </developer>
+  </developers>
+  
+  <licenses>
+    <license>
+      <name>The MIT License</name>
+      <url>http://www.opensource.org/licenses/mit-license.php</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>1.4</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <parent>
+  	<groupId>org.sonatype.oss</groupId>
+  	<artifactId>oss-parent</artifactId>
+  	<version>7</version>
+  </parent>
 </project>
