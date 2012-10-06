@@ -1,8 +1,8 @@
 package com.github.rishihahs.wordsearchsolver.grid;
 
 import java.awt.Point;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * 
@@ -12,7 +12,7 @@ import java.util.List;
 public class BasicGrid implements Grid {
 
     private String[][] grid;
-    public List<Point> markedPoints = new ArrayList<Point>();
+    private final Set<Point> markedPoints = new HashSet<Point>();
 
     /**
      * Creates a new BasicGrid with the supplied grid
@@ -62,11 +62,17 @@ public class BasicGrid implements Grid {
     }
 
     /**
-     * @param grid
-     *            the grid to set
+     * @param grid the grid to set
      */
     public void setGrid(String[][] grid) {
         this.grid = grid;
+    }
+
+    /**
+     * @return the markedPoints
+     */
+    public Set<Point> getMarkedPoints() {
+        return markedPoints;
     }
 
 }
