@@ -16,7 +16,7 @@ public interface Grid {
      *            The {@link java.awt.Point} at which the letter is at
      * @return The letter
      */
-    public String getLetterAt(Point point);
+    String getLetterAt(Point point);
 
     /**
      * Marks a letter as found
@@ -24,7 +24,7 @@ public interface Grid {
      * @param point
      *            The point of the letter that has been marked as found
      */
-    public void markLetterAt(Point point);
+    void markLetterAt(Point point);
 
     /**
      * Checks if the given point is a valid point on the current grid
@@ -33,20 +33,20 @@ public interface Grid {
      *            The point to check
      * @return Whether the point is valid
      */
-    public boolean isValidLetter(Point point);
+    boolean isValidLetter(Point point);
 
     /**
      * Gets the number of rows in the grid
      * 
      * @return The number of rows in the grid
      */
-    public int getRows();
+    int getRows();
 
     /**
      * Gets the number of columns in the grid
      * 
      * @return The number of columns in the grid
      */
-    public int getCols();
+    int getCols();
 
 }
